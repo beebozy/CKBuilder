@@ -1,0 +1,16 @@
+[workspace]
+resolver = "2"
+
+members = [
+  "contracts/multisig",
+  "tests",
+]
+
+[profile.release]
+overflow-checks = true
+strip = false
+codegen-units = 1
+debug = true
+
+[patch.crates-io]
+bytes = { path = "/Users/admin/ckb/bytes-patched" }
