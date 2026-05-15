@@ -18,7 +18,7 @@ Resource
 https://github.com/beebozy/CKBuilder/tree/main/docs.nervos.org/examples/dApp/simple-transfer
 
 Screenshot:
-
+![Simple Transfer Screenshot](./images/transfer.png)
 
 ---
 
@@ -36,7 +36,7 @@ https://github.com/beebozy/CKBuilder/tree/main/docs.nervos.org/examples/dApp/sto
 
 Screenshot:
 
-
+![Spore Data Screenshot](./images/storeData.png)
 ---
 
 3. Create DOB (Digital Object) dApp
@@ -53,7 +53,7 @@ https://github.com/beebozy/CKBuilder/tree/main/docs.nervos.org/examples/dApp/cre
 
 Screenshot:
 
-
+![Dob Screenshot](./images/dob.png)
 ---
 
 4. Serialization in CKB (Molecule)
