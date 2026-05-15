@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>CKB On-Chain Message App</title>
+
+    <!-- Fonts -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100vh;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 40px;
+
+        background:
+          radial-gradient(circle at top left, #312e81, transparent 30%),
+          radial-gradient(circle at bottom right, #0891b2, transparent 30%),
+          linear-gradient(135deg, #0f172a, #111827);
+
+        color: white;
+
+        overflow-x: hidden;
+      }
+
+      /* Animated Glow Background */
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        width: 450px;
+        height: 450px;
+        border-radius: 50%;
+        filter: blur(120px);
+        opacity: 0.4;
+        z-index: 0;
+        animation: float 10s ease-in-out infinite;
+      }
+
+      body::before {
+        background: #6366f1;
+        top: -120px;
+        left: -120px;
+      }
+
+      body::after {
+        background: #06b6d4;
+        bottom: -120px;
+        right: -120px;
+        animation-delay: 4s;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+
+        50% {
+          transform: translateY(20px);
+        }
+
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      #root {
+        position: relative;
+        z-index: 1;
+
+        width: 100%;
+        max-width: 1000px;
+
+        padding: 32px;
+
+        border-radius: 28px;
+
+        background: rgba(255, 255, 255, 0.08);
+
+        border: 1px solid rgba(255, 255, 255, 0.12);
+
+        backdrop-filter: blur(18px);
+
+        box-shadow:
+          0 10px 40px rgba(0, 0, 0, 0.35),
+          inset 0 1px 1px rgba(255, 255, 255, 0.1);
+      }
+
+      /* Optional global styles for React app */
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 24px;
+
+        background: linear-gradient(
+          to right,
+          #60a5fa,
+          #c084fc
+        );
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+
+        margin-top: 8px;
+        margin-bottom: 18px;
+
+        padding: 14px 16px;
+
+        border-radius: 14px;
+
+        border: 1px solid rgba(255, 255, 255, 0.12);
+
+        background: rgba(255, 255, 255, 0.06);
+
+        color: white;
+
+        font-size: 15px;
+
+        outline: none;
+
+        transition: all 0.2s ease;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: #60a5fa;
+
+        box-shadow:
+          0 0 0 4px rgba(96, 165, 250, 0.15);
+      }
+
+      button {
+        padding: 14px 22px;
+
+        border: none;
+        border-radius: 14px;
+
+        background: linear-gradient(
+          135deg,
+          #3b82f6,
+          #8b5cf6
+        );
+
+        color: white;
+
+        font-size: 15px;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+
+        box-shadow:
+          0 10px 25px rgba(99, 102, 241, 0.4);
+      }
+
+      button:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 20px;
+      }
+
+      li {
+        margin-bottom: 16px;
+
+        padding: 16px;
+
+        border-radius: 14px;
+
+        background: rgba(255, 255, 255, 0.05);
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      pre {
+        margin-top: 10px;
+
+        padding: 14px;
+
+        border-radius: 12px;
+
+        overflow-x: auto;
+
+        background: rgba(0, 0, 0, 0.35);
+
+        color: #93c5fd;
+      }
+
+      small {
+        opacity: 0.8;
+      }
+
+      a {
+        color: #7dd3fc;
+      }
+
+      hr {
+        margin: 28px 0;
+        border: none;
+        height: 1px;
+
+        background: rgba(255, 255, 255, 0.12);
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 18px;
+        }
+
+        #root {
+          padding: 24px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script src="index.tsx" type="module"></script>
+  </body>
+</html>

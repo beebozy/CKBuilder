@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>CKB Wallet Dashboard</title>
+
+    <!-- Google Font -->
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100vh;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+
+        background: #050505;
+
+        color: #ffffff;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 40px;
+
+        overflow-x: hidden;
+      }
+
+      /* Subtle glowing background */
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        filter: blur(140px);
+        z-index: 0;
+        opacity: 0.3;
+      }
+
+      body::before {
+        background: #2563eb;
+        top: -100px;
+        left: -100px;
+      }
+
+      body::after {
+        background: #7c3aed;
+        bottom: -100px;
+        right: -100px;
+      }
+
+      #root {
+        position: relative;
+        z-index: 1;
+
+        width: 100%;
+        max-width: 950px;
+
+        padding: 32px;
+
+        border-radius: 24px;
+
+        background: rgba(15, 15, 15, 0.92);
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        box-shadow:
+          0 0 40px rgba(0, 0, 0, 0.6),
+          0 0 80px rgba(37, 99, 235, 0.08);
+      }
+
+      /* Global React styles */
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        color: white;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+        margin-bottom: 24px;
+
+        background: linear-gradient(
+          to right,
+          #60a5fa,
+          #a78bfa
+        );
+
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      p,
+      li,
+      label,
+      span,
+      small,
+      div {
+        color: #e5e7eb;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+
+        margin-top: 8px;
+        margin-bottom: 18px;
+
+        padding: 14px 16px;
+
+        border-radius: 14px;
+
+        border: 1px solid rgba(255, 255, 255, 0.08);
+
+        background: #111111;
+
+        color: white;
+
+        font-size: 15px;
+
+        outline: none;
+
+        transition: all 0.2s ease;
+      }
+
+      input::placeholder,
+      textarea::placeholder {
+        color: #9ca3af;
+      }
+
+      input:focus,
+      textarea:focus {
+        border-color: #3b82f6;
+
+        box-shadow:
+          0 0 0 4px rgba(59, 130, 246, 0.15);
+      }
+
+      button {
+        padding: 14px 24px;
+
+        border: none;
+        border-radius: 14px;
+
+        background: linear-gradient(
+          135deg,
+          #2563eb,
+          #7c3aed
+        );
+
+        color: white;
+
+        font-size: 15px;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+      }
+
+      button:hover {
+        transform: translateY(-2px);
+
+        box-shadow:
+          0 10px 25px rgba(59, 130, 246, 0.35);
+      }
+
+      button:disabled {
+        opacity: 0.45;
+        cursor: not-allowed;
+      }
+
+      ul {
+        list-style: none;
+        margin-top: 20px;
+      }
+
+      li {
+        margin-bottom: 16px;
+
+        padding: 16px;
+
+        border-radius: 14px;
+
+        background: #0f0f0f;
+
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      pre {
+        margin-top: 12px;
+
+        padding: 16px;
+
+        overflow-x: auto;
+
+        border-radius: 12px;
+
+        background: #000000;
+
+        color: #93c5fd;
+
+        border: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      a {
+        color: #60a5fa;
+      }
+
+      small {
+        color: #9ca3af;
+      }
+
+      hr {
+        margin: 28px 0;
+
+        border: none;
+
+        height: 1px;
+
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      @media (max-width: 768px) {
+        body {
+          padding: 18px;
+        }
+
+        #root {
+          padding: 24px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <script src="index.tsx" type="module"></script>
+  </body>
+</html>
