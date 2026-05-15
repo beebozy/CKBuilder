@@ -130,8 +130,6 @@ Key Takeaways
 By the end of Week 2, I gained:
 
 - Practical understanding of how CKB dApps are built
-- Experience working with real transaction flows
 - Stronger grasp of Cell-based state management
 - Understanding of Molecule serialization system
 - Exposure to DOB (Digital Object) design patterns
-- Improved ability to connect Rust code with blockchain logic
