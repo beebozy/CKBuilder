@@ -114,7 +114,7 @@ Implemented and deployed a working post-quantum lock script on CKB testnet.
 
 GitHub Repository:
 
-[ckb-pq-dillithium Repository](https://github.com/beebozy/ckb-pq-dillithium)
+[ckb-pq-dillithium Repository](https://github.com/beebozy/ckb-pq-dillithium-) 
 
 #### Testnet Deployment
 
