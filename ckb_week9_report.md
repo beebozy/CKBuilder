@@ -105,17 +105,7 @@
   - Confirmed that the contract logic now better reflects the intended
   lock behavior and security expectations.
   
-  Status
-
-  ┌───────────────────────────────┬───────────┐
-  │           Component           │  Status   │
-  ├───────────────────────────────┼───────────┤
-  │ Witness handling correction   │ Completed │
-  ├───────────────────────────────┼───────────┤
-  │ Contract security improvement │ Completed │
-  ├───────────────────────────────┼───────────┤
-  │ Verification flow alignment   │ Completed │
-  └───────────────────────────────┴───────────┘
+ 
 
   UI Development
 
@@ -126,17 +116,7 @@
   - Created a foundation for future integration between the UI, SDK, and
   contract-backed wallet actions.
   
-  Status
 
-  ┌────────────────────────────┬─────────────┐
-  │            Task            │   Status    │
-  ├────────────────────────────┼─────────────┤
-  │ UI scaffolding             │  
-  ├────────────────────────────┼─────────────┤
-  │ Wallet interface structure │ 
-  ├────────────────────────────┼─────────────┤
-  │ SDK/UI integration         │  
-  └────────────────────────────┴─────────────┘
 
   Next Steps
 
