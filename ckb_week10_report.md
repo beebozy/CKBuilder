@@ -148,17 +148,14 @@
 
   Status
 
-  ┌───────────────────────────────────────┬───────────┐
-  │               Component               │  Status   │
-  ├───────────────────────────────────────┼───────────┤
-  │ Browser-safe hashing update           │ Completed │
-  ├───────────────────────────────────────┼───────────┤
-  │ Runtime environment handling          │ Completed │
-  ├───────────────────────────────────────┼───────────┤
-  │ WASM loading improvement              │ Completed │
-  ├───────────────────────────────────────┼───────────┤
-  │ SDK package export refinement         │ Completed │
-  └───────────────────────────────────────┴───────────┘
+  Browser-safe hashing update completed
+
+  Runtime environment handling completed
+  
+  WASM loading improvement completed
+
+  SDK package export refinement completed
+
 
 
   UI Development
@@ -174,17 +171,14 @@
 
   Status
 
-  ┌────────────────────────────┬───────────┐
-  │            Task            │  Status   │
-  ├────────────────────────────┼───────────┤
-  │ UI refinement              │ Completed │
-  ├────────────────────────────┼───────────┤
-  │ Address display cleanup    │ Completed │
-  ├────────────────────────────┼───────────┤
-  │ SDK/UI integration prep    │ Completed │
-  └────────────────────────────┴───────────┘
+  UI refinement
 
-  ---
+  Address display cleanup 
+
+  SDK/UI integration prep
+
+
+  
   Next Steps
   
   - Continue integrating the browser-safe SDK directly into the
